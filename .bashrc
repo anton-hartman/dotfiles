@@ -115,10 +115,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
-. ~/.config/devbox_completion.sh
+export EDITOR="nvim"
+export VISUAL="$EDITOR"
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
+source ~/.config/devbox_completion.sh
 eval "$(devbox global shellenv --init-hook)"
-eval "$(fzf --bash)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
+
+# For dofiles tracking (git --bare) repo
 alias config='/usr/bin/git --git-dir=/home/anton/.cfg.git/ --work-tree=/home/anton'
 alias lazyconfig='lazygit --git-dir ~/.cfg.git/ --work-tree ~'
