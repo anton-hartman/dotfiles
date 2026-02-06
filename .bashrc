@@ -121,7 +121,19 @@ export VISUAL="$EDITOR"
 source ~/.config/devbox_completion.sh
 eval "$(devbox global shellenv --init-hook)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
+source ~/.completion/.bash.tmux-bash-completion
 
 # For dofiles tracking (git --bare) repo
 alias config='/usr/bin/git --git-dir=/home/anton/.cfg.git/ --work-tree=/home/anton'
 alias lazyconfig='lazygit --git-dir ~/.cfg.git/ --work-tree ~'
+
+isdev() {
+  if [[ $DEVBOX_SHELL_ENABLED == 1 ]]; then
+    echo "Devbox shell👍"
+  else
+    echo "Not Devbox shell👎"
+  fi
+}
+dev() {
+  devbox shell "$@"
+}

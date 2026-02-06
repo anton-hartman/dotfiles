@@ -9,7 +9,10 @@
     "fd@latest",
     "lazygit@latest",
     "clang@latest",
-    "nodejs@latest"
+    "nodejs@latest",
+    "yazi@latest",
+    "timewarrior@latest",
+    "tree@latest"
   ],
   "shell": {
     "init_hook": ["source <(npm completion)", "eval \"$(fzf --bash)\""],

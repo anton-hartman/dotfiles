@@ -505,6 +505,150 @@
           "store_path": "/nix/store/0qh46n4bqwci1dli1bjqkavvzmdw87x3-ripgrep-15.1.0"
         }
       }
+    },
+    "timewarrior@latest": {
+      "last_modified": "2026-01-23T17:20:52Z",
+      "resolved": "github:NixOS/nixpkgs/a1bab9e494f5f4939442a57a58d0449a109593fe#timewarrior",
+      "source": "devbox-search",
+      "version": "1.9.1",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/jlz4lwf1cjdhi81gshczrv9b34qwg2r9-timewarrior-1.9.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/jlz4lwf1cjdhi81gshczrv9b34qwg2r9-timewarrior-1.9.1"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/qnmmi8xcgfa301rdxs6rvrvprqridjl7-timewarrior-1.9.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/qnmmi8xcgfa301rdxs6rvrvprqridjl7-timewarrior-1.9.1"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/j5xp521q88dg2x00m28rmb8zbx9s1f48-timewarrior-1.9.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/j5xp521q88dg2x00m28rmb8zbx9s1f48-timewarrior-1.9.1"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/9vaq6rmmdbydz70krvj5rdlj837rr7zw-timewarrior-1.9.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/9vaq6rmmdbydz70krvj5rdlj837rr7zw-timewarrior-1.9.1"
+        }
+      }
+    },
+    "tree@latest": {
+      "last_modified": "2026-01-23T17:20:52Z",
+      "resolved": "github:NixOS/nixpkgs/a1bab9e494f5f4939442a57a58d0449a109593fe#tree",
+      "source": "devbox-search",
+      "version": "2.2.1",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/7lrd7hqh3b9lvcfgr4iajdblra2qrj9m-tree-2.2.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/7lrd7hqh3b9lvcfgr4iajdblra2qrj9m-tree-2.2.1"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/jf8bacvhyd43y5rf2lblh0wj6isc5qs7-tree-2.2.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/jf8bacvhyd43y5rf2lblh0wj6isc5qs7-tree-2.2.1"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/y4h7yikrixpcca5v1zv2p1cv30z8flrv-tree-2.2.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/y4h7yikrixpcca5v1zv2p1cv30z8flrv-tree-2.2.1"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/r14xhqqnj9nfb7wg2by24kd70dmlxnyk-tree-2.2.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/r14xhqqnj9nfb7wg2by24kd70dmlxnyk-tree-2.2.1"
+        }
+      }
+    },
+    "yazi@latest": {
+      "last_modified": "2026-01-23T17:20:52Z",
+      "resolved": "github:NixOS/nixpkgs/a1bab9e494f5f4939442a57a58d0449a109593fe#yazi",
+      "source": "devbox-search",
+      "version": "26.1.22",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/kmxlhmcfjjba06xxb0fk4shdi5dm53a0-yazi-26.1.22",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/kmxlhmcfjjba06xxb0fk4shdi5dm53a0-yazi-26.1.22"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/v7ml0gf70f4xabsml6ph9vf3m25mkmpp-yazi-26.1.22",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/v7ml0gf70f4xabsml6ph9vf3m25mkmpp-yazi-26.1.22"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/n2j8j8j2vhrfqmqp3ibdi95icsvhr3kr-yazi-26.1.22",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/n2j8j8j2vhrfqmqp3ibdi95icsvhr3kr-yazi-26.1.22"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/v1pazjgyyq022bjvm5cjb9jxbkd9nm68-yazi-26.1.22",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/v1pazjgyyq022bjvm5cjb9jxbkd9nm68-yazi-26.1.22"
+        }
+      }
     }
   }
 }
