@@ -12,7 +12,8 @@
     "nodejs@latest",
     "yazi@latest",
     "timewarrior@latest",
-    "tree@latest"
+    "tree@latest",
+    "tmux@latest"
   ],
   "shell": {
     "init_hook": ["source <(npm completion)", "eval \"$(fzf --bash)\""],
