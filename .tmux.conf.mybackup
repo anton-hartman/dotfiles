@@ -31,7 +31,6 @@ set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-pain-control'
 set -g @plugin 'catppuccin/tmux'
 
-# # Config 3
 set -g @catppuccin_window_left_separator ""
 set -g @catppuccin_window_right_separator " "
 set -g @catppuccin_window_middle_separator " █"
@@ -39,6 +38,9 @@ set -g @catppuccin_window_number_position "right"
 
 set -g @catppuccin_window_default_fill "number"
 set -g @catppuccin_window_default_text "#W"
+
+set -g @catppuccin_window_current_fill "number"
+set -g @catppuccin_window_current_text "#W"
 
 set -g @catppuccin_status_modules_right "directory user host session"
 set -g @catppuccin_status_left_separator  " "
@@ -49,23 +51,30 @@ set -g @catppuccin_status_connect_separator "no"
 
 set -g @catppuccin_directory_text "#{pane_current_path}"
 
-# # Config 1
-# set -g @catppuccin_window_right_separator "█ "
-#
-# set -g @catppuccin_window_number_position "right"
-# set -g @catppuccin_window_middle_separator " | "
-#
-# set -g @catppuccin_window_default_fill "none"
-#
-# set -g @catppuccin_window_current_fill "all"
-#
-#
-# set -g @catppuccin_status_modules_right "application session user host date_time"
-# set -g @catppuccin_status_left_separator "█"
-#
-# set -g @catppuccin_status_right_separator "█"
-#
-# set -g @catppuccin_date_time_text "%Y-%m-%d %H:%M:%S"
+
+# Configure the catppuccin plugin
+set -g @catppuccin_flavor "mocha"
+set -g @catppuccin_window_status_style "rounded"
+set -g @catppuccin_window_default_text "#W"
+set -g @catppuccin_window_current_text "#W"
+# Load catppuccin
+run ~/.config/tmux/plugins/catppuccin/tmux/catppuccin.tmux
+# For TPM, instead use `run ~/.tmux/plugins/tmux/catppuccin.tmux`
+
+# Make the status line pretty and add some modules
+set -g status-right-length 100
+set -g status-left-length 100
+set -g status-left ""
+set -g status-right "#{E:@catppuccin_status_application}"
+set -agF status-right "#{E:@catppuccin_status_cpu}"
+set -ag status-right "#{E:@catppuccin_status_session}"
+set -ag status-right "#{E:@catppuccin_status_uptime}"
+set -agF status-right "#{E:@catppuccin_status_battery}"
+
+
+
+
+
 
 # Initialize TPM (keep this line at the very bottom of your tmux.conf).
-run '~/.tmux/plugins/tpm/tpm'
+# run '~/.tmux/plugins/tpm/tpm'
