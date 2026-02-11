@@ -16,7 +16,13 @@
     "tmux@latest"
   ],
   "shell": {
-    "init_hook": ["source <(npm completion)", "eval \"$(fzf --bash)\""],
+    "init_hook": [
+      "source <(npm completion)",
+      "eval \"$(fzf --bash)\"",
+      "source ~/.completion/timew-bashcompletion/timew",
+      "alias tw=timew",
+      "complete -F _timew tw"
+    ],
     "scripts": {
       "test": ["echo \"Error: no test specified\" && exit 1"]
     }
