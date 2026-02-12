@@ -2,7 +2,6 @@
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.16.0/.schema/devbox.schema.json",
   "packages": [
     "ripgrep@latest",
-    "nautilus@latest",
     "neovim@latest",
     "fastfetch@latest",
     "fzf@latest",
@@ -13,7 +12,9 @@
     "yazi@latest",
     "timewarrior@latest",
     "tree@latest",
-    "tmux@latest"
+    "tmux@latest",
+    "zoxide@latest",
+    "bat@latest"
   ],
   "shell": {
     "init_hook": [
@@ -21,7 +22,8 @@
       "eval \"$(fzf --bash)\"",
       "source ~/.completion/timew-bashcompletion/timew",
       "alias tw=timew",
-      "complete -F _timew tw"
+      "complete -F _timew tw",
+      "eval \"$(zoxide init --cmd cd bash)\""
     ],
     "scripts": {
       "test": ["echo \"Error: no test specified\" && exit 1"]
