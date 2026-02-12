@@ -1,5 +1,6 @@
 return {
   "nvim-mini/mini.files",
+  lazy = false,
   keys = {
     {
       "<leader>e",
@@ -24,6 +25,17 @@ return {
     },
   },
   opts = {
+    -- to map moving up and down directories to arrow keys instead of 'h' and 'l'.
+    -- want to find out how to have both arrow keys and 'h, l' active at the same time.
+    -- mappings = {
+    --   go_in = "<Right>",
+    --   go_out = "<Left>",
+    -- },
+    windows = {
+      width_nofocus = 20,
+      width_focus = 30,
+      width_preview = 100,
+    },
     options = {
       use_as_default_explorer = true,
     },
