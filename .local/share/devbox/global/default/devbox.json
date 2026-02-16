@@ -22,6 +22,7 @@
       "eval \"$(fzf --bash)\"",
       "source ~/.completion/timew-bashcompletion/timew",
       "alias tw=timew",
+      "alias tws='timew summary'",
       "complete -F _timew tw",
       "eval \"$(zoxide init --cmd cd bash)\""
     ],
