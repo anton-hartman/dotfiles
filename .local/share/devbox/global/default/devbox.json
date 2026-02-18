@@ -14,7 +14,8 @@
     "tree@latest",
     "tmux@latest",
     "zoxide@latest",
-    "bat@latest"
+    "bat@latest",
+    "stow@latest"
   ],
   "shell": {
     "init_hook": [
