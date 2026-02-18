@@ -1,6 +1,7 @@
 # Repo to Manage my Dotfiles
 
-- My dotfiles are tracked using a "bare" git repo. View [this](https://www.atlassian.com/git/tutorials/dotfiles) tutorial to see how this works.
+- My dotfiles are tracked using a "bare" git repo. View [this](https://www.atlassian.com/git/tutorials/dotfiles)
+  tutorial to see how this works.
 - The repo must be setup with `~` as its working directory.
 
 ## Windows Terminal
@@ -8,9 +9,12 @@
 > [!NOTE]
 > Ignore this section if you are not using WSL and windows terminal.
 
-A Windows-native symbolic link must be created to configure windows terminal. Since Windows Terminal is a Windows application, it cannot resolve standard Linux symlinks created with `ln -s` inside WSL.
+A Windows-native symbolic link must be created to configure windows terminal.
+Since Windows Terminal is a Windows application, it cannot resolve standard
+Linux symlinks created with `ln -s` inside WSL.
 
-To create the symlink you must run these commands in a PowerShell window with Administrator privileges.
+To create the symlink you must run these commands in a PowerShell window with
+Administrator privileges.
 
 ```sh
 # 1. Define paths
