@@ -1,8 +1,6 @@
 # Repo to Manage my Dotfiles
 
-- My dotfiles are tracked using a "bare" git repo. View [this](https://www.atlassian.com/git/tutorials/dotfiles)
-  tutorial to see how this works.
-- The repo must be setup with `~` as its working directory.
+- My dotfiles are tracked using GNU Stow.
 
 ## Windows Terminal
 
