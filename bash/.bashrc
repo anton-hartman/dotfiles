@@ -118,8 +118,6 @@ fi
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
 
-source ~/.config/devbox_completion.sh
-eval "$(devbox global shellenv --init-hook)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
 source ~/.completion/.bash.tmux-bash-completion
 
@@ -137,3 +135,16 @@ isdev() {
 dev() {
   devbox shell "$@"
 }
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+source <(npm completion)
+eval EAS_AC_BASH_SETUP_PATH=/home/anton/.cache/eas-cli/autocomplete/bash_setup && test -f $EAS_AC_BASH_SETUP_PATH && source $EAS_AC_BASH_SETUP_PATH # eas autocomplete setup
+eval "$(starship init bash)"
+
+alias lg='lazygit'
+
+source ~/.config/devbox_completion.sh
+eval "$(devbox global shellenv --init-hook)"
