@@ -146,5 +146,5 @@ eval "$(starship init bash)"
 
 alias lg='lazygit'
 
-source ~/.config/devbox_completion.sh
+source ~/.completion/devbox_completion.sh
 eval "$(devbox global shellenv --init-hook)"
