@@ -2,6 +2,21 @@
 
 My dotfiles are tracked using GNU Stow.
 
+## To Do
+
+Make `enter` mean `enter` and not auto complete in Neovim.
+
+## Installation Instructions
+
+1. Install devbox and activate `devbox global`
+
+   ```sh
+   curl -fsSL https://get.jetify.com/devbox | bash
+   ```
+
+2. Install tmux package manager (TPM)
+3. Install a nerd font
+
 ## Windows Terminal
 
 > [!NOTE]
