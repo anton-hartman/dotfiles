@@ -1,16 +1,33 @@
 # Repo to Manage my Dotfiles
 
-- My dotfiles are tracked using a "bare" git repo. View [this](https://www.atlassian.com/git/tutorials/dotfiles) tutorial to see how this works.
-- The repo must be setup with `~` as its working directory.
+My dotfiles are tracked using GNU Stow.
+
+## To Do
+
+Make `enter` mean `enter` and not auto complete in Neovim.
+
+## Installation Instructions
+
+1. Install devbox and activate `devbox global`
+
+   ```sh
+   curl -fsSL https://get.jetify.com/devbox | bash
+   ```
+
+2. Install tmux package manager (TPM)
+3. Install a nerd font
 
 ## Windows Terminal
 
 > [!NOTE]
 > Ignore this section if you are not using WSL and windows terminal.
 
-A Windows-native symbolic link must be created to configure windows terminal. Since Windows Terminal is a Windows application, it cannot resolve standard Linux symlinks created with `ln -s` inside WSL.
+A Windows-native symbolic link must be created to configure windows terminal.
+Since Windows Terminal is a Windows application, it cannot resolve standard
+Linux symlinks created with `ln -s` inside WSL.
 
-To create the symlink you must run these commands in a PowerShell window with Administrator privileges.
+To create the symlink you must run these commands in a PowerShell window with
+Administrator privileges.
 
 ```sh
 # 1. Define paths
