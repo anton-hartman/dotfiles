@@ -1,32 +1,30 @@
 # ~/.bashrc
 
-# 1. Exit if not interactive (i.e., used by a human and not a script)
-case $- in
-*i*) ;;
-*) return ;;
-esac
+# 1. Non-interactive shell check
+[[ $- != *i* ]] && return
 
-# 2. Sensible Defaults
-HISTCONTROL=ignoreboth
-shopt -s histappend
-shopt -s checkwinsize
-# Allow ** to match subdirectories
-shopt -s globstar
+# 2. Cross-Platform Homebrew Initialization
+# Check common paths for macOS and Linux
+if [[ -f /opt/homebrew/bin/brew ]]; then
+  # Apple Silicon Mac
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [[ -f /home/linuxbrew/.linuxbrew/bin/brew ]]; then
+  # Linux / WSL
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
+fi
 
-# 3. Load Modular Files
+# 3. Load Modular Configs (Stow-friendly)
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 [[ -f ~/.bash_completions ]] && . ~/.bash_completions
 
-# 4. Tool Initializations
-# Environment
+# 4. Global Tool Init
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
 
-# Homebrew (Linux Path)
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
-
-# Devbox Global
+eval "$(starship init bash)"
 eval "$(devbox global shellenv --init-hook)"
 
-# Starship Prompt (Handles your prompt for you)
-eval "$(starship init bash)"
+# 5. Bash-specific behavior
+shopt -s histappend
+shopt -s checkwinsize
+HISTCONTROL=ignoreboth
