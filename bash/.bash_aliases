@@ -1,14 +1,11 @@
-# --- Standard Aliases ---
+# --- Navigation & Listing ---
 alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias grep='grep --color=auto'
 
-# --- Project & Tool Aliases ---
+# --- Dev Tools ---
 alias lg='lazygit'
-alias config='/usr/bin/git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME'
-alias lazyconfig='lazygit --git-dir ~/.cfg.git/ --work-tree ~'
 
 # --- Functions ---
 isdev() {
