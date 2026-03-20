@@ -22,8 +22,12 @@ shopt -s globstar
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
 
-# Homebrew (Linux Path)
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
+# Homebrew (Mac or Linux Path)
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
+fi
 
 # Devbox Global
 eval "$(devbox global shellenv --init-hook)"
