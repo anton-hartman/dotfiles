@@ -2,7 +2,7 @@
 [[ $- != *i* ]] && return
 
 # 1. Source the Shared Core -------------
-f="$HOME/.config/sh-common/.sh_common.sh"
+f="$HOME/.config/sh-common/common.sh"
 [[ -f "$f" ]] && . "$f"
 # ---------------------------------------
 

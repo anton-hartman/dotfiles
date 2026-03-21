@@ -13,13 +13,13 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
 fi
 
 # Load Modular Configs
-f="$HOME/.config/sh-common/.sh_aliases"
+f="$HOME/.config/sh-common/aliases.sh"
 [[ -f "$f" ]] && . "$f"
-f="$HOME/.config/sh-common/.sh_completions"
+f="$HOME/.config/sh-common/completions.sh"
 [[ -f "$f" ]] && . "$f"
 
 # Cross Compatible Completions
 source <(npm completion)
 
-# Other 
+# Other
 eval "$(devbox global shellenv --init-hook)"

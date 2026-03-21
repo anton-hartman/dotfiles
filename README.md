@@ -4,14 +4,17 @@ My dotfiles are tracked using GNU Stow.
 
 ## To Do
 
-Make `enter` mean `enter` and not auto complete in Neovim.
+- Make zsh and bash cross compatible
+- Make function for sourcing files and tools that displays warning if not present in shell setup
+- Step up same navigation between tmux and nvim windows
+- Make `enter` mean `enter` and not auto complete in Neovim.
 
 ## Installation Instructions
 
 1. Install devbox and activate `devbox global`
 
    ```sh
-   curl -fsSL https://get.jetify.com/devbox | bash
+   curl -fsSL https://get.jetify.com/devbox | <bash|zsh>
    ```
 
 2. Install tmux package manager (TPM)
