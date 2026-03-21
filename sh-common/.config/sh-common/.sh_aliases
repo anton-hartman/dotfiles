@@ -8,14 +8,14 @@ alias l='ls -CF'
 alias lg='lazygit'
 
 # --- Functions ---
+dev() {
+  devbox shell "$@"
+}
+
 isdev() {
   if [[ $DEVBOX_SHELL_ENABLED == 1 ]]; then
     echo "Devbox shell👍"
   else
     echo "Not Devbox shell👎"
   fi
-}
-
-dev() {
-  devbox shell "$@"
 }

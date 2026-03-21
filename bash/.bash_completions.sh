@@ -1,10 +1,12 @@
 # System Completions
-[[ -f /usr/share/bash-completion/bash_completion ]] && source /usr/share/bash-completion/bash_completion
+f="/usr/share/bash-completion/bash_completion"
+[[ -f "$f" ]] && . "$f"
 
 # Tool Specific
-source <(npm completion)
-[[ -f ~/.completion/devbox_completion.sh ]] && source ~/.completion/devbox_completion.sh
-[[ -f ~/.completion/.bash.tmux-bash-completion ]] && source ~/.completion/.bash.tmux-bash-completion
+f="$HOME/.completion/devbox_completion.sh"
+[[ -f "$f" ]] && . "$f"
+f="$HOME/.completion/.bash.tmux-bash-completion"
+[[ -f "$f" ]] && . "$f"
 
 # NVM (Node Version Manager)
 export NVM_DIR="$HOME/.nvm"
@@ -12,4 +14,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # Expo / EAS CLI
-[[ -f ~/.cache/eas-cli/autocomplete/bash_setup ]] && source ~/.cache/eas-cli/autocomplete/bash_setup
+f="$HOME/.cache/eas-cli/autocomplete/bash_setup"
+[[ -f "$f" ]] && . "$f"
