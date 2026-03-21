@@ -1,30 +1,38 @@
-# ~/.bashrc
-
-# 1. Non-interactive shell check
+# Exit if not interactive
 [[ $- != *i* ]] && return
 
-# 2. Cross-Platform Homebrew Initialization
-# Check common paths for macOS and Linux
-if [[ -f /opt/homebrew/bin/brew ]]; then
-  # Apple Silicon Mac
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-elif [[ -f /home/linuxbrew/.linuxbrew/bin/brew ]]; then
-  # Linux / WSL
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
-fi
+# 1. Source the Shared Core -------------
+f="$HOME/.config/sh-common/.sh_common.sh"
+[[ -f "$f" ]] && . "$f"
+# ---------------------------------------
 
-# 3. Load Modular Configs (Stow-friendly)
-[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
-[[ -f ~/.bash_completions ]] && . ~/.bash_completions
-
-# 4. Global Tool Init
-export EDITOR="nvim"
-export VISUAL="$EDITOR"
-
-eval "$(starship init bash)"
-eval "$(devbox global shellenv --init-hook)"
-
-# 5. Bash-specific behavior
+# 2. Bash-specific behavior
 shopt -s histappend
 shopt -s checkwinsize
 HISTCONTROL=ignoreboth
+
+# 3. Prompt
+eval "$(starship init bash)"
+
+# ---- Bash Completions ----
+
+# System Completions
+f="/usr/share/bash-completion/bash_completion"
+[[ -f "$f" ]] && . "$f"
+
+# Devbox
+f="$HOME/.completion/devbox_completion.sh"
+[[ -f "$f" ]] && . "$f"
+
+# Tmux
+f="$HOME/.completion/.bash.tmux-bash-completion"
+[[ -f "$f" ]] && . "$f"
+
+# NVM (Node Version Manager)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# Expo / EAS CLI
+f="$HOME/.cache/eas-cli/autocomplete/bash_setup"
+[[ -f "$f" ]] && . "$f"
