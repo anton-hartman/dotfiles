@@ -7,6 +7,11 @@ alias l='ls -CF'
 # --- Dev Tools ---
 alias lg='lazygit'
 
+# --- Time Warrior ---
+alias tw=timew
+alias tws='timew summary'
+complete -F _timew tw
+
 # --- Functions ---
 dev() {
   devbox shell "$@"
