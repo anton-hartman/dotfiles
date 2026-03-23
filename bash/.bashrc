@@ -36,3 +36,13 @@ export NVM_DIR="$HOME/.nvm"
 # Expo / EAS CLI
 f="$HOME/.cache/eas-cli/autocomplete/bash_setup"
 [[ -f "$f" ]] && . "$f"
+
+# FZF
+eval "$(fzf --bash)"
+
+# Time Warrior
+source ~/.completion/timew-bashcompletion/timew
+
+# Zoxide
+eval "$(zoxide init --cmd cd bash)"
+

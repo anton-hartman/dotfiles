@@ -9,6 +9,18 @@ autoload -U compinit && compinit
 # 3. Prompt
 eval "$(starship init zsh)"
 
-# Must still be move to shell common
+# FZF
+eval "$(fzf --zsh)"
+
+# Zoxide
+eval "$(zoxide init --cmd cd zsh)"
+
+# ----------------------------------------------------------------
+# Must still be move to shell common of project specific files
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+
+
