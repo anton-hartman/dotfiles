@@ -14,7 +14,7 @@ My dotfiles are tracked using GNU Stow.
 1. Install devbox and activate `devbox global`
 
    ```sh
-   curl -fsSL https://get.jetify.com/devbox | <bash|zsh>
+   curl -fsSL https://get.jetify.com/devbox | bash
    ```
 
 2. Install tmux package manager (TPM)
