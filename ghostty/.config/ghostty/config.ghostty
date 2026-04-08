@@ -1,1 +1,4 @@
 theme = Catppuccin Macchiato
+
+# So that the text does not look dull.
+font-thicken = true
