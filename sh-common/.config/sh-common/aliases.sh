@@ -12,6 +12,11 @@ alias tw=timew
 alias tws='timew summary'
 complete -F _timew tw
 
+# --- Git ---
+alias gs='git status'
+alias gfs='git fetch && git status'
+alias gc='git commit'
+
 # --- Functions ---
 dev() {
   devbox shell "$@"
@@ -24,3 +29,4 @@ isdev() {
     echo "Not Devbox shell👎"
   fi
 }
+
