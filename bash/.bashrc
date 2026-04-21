@@ -42,7 +42,9 @@ eval "$(fzf --bash)"
 
 # Time Warrior
 source ~/.completion/timew-bashcompletion/timew
+alias tw=timew
+alias tws='timew summary'
+complete -F _timew tw
 
 # Zoxide
 eval "$(zoxide init --cmd cd bash)"
-
