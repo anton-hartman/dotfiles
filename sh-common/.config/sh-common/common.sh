@@ -14,12 +14,17 @@ fi
 
 # Load Modular Configs
 f="$HOME/.config/sh-common/aliases.sh"
-[[ -f "$f" ]] && . "$f"
-f="$HOME/.config/sh-common/completions.sh"
+# shellcheck source=./aliases.sh
 [[ -f "$f" ]] && . "$f"
 
-# Cross Compatible Completions
+# --- Completions ---
+# Shellcheck trys to analyse the file being source but needs a constant path to follow.
+# In this case we can disable the check since npm's completion script is not our concern.
+# shellcheck disable=SC1090
 source <(npm completion)
+# shellcheck disable=SC1090
+source <(eas autocomplete:script zsh)
 
-# Other
+# Runs devbox script
 eval "$(devbox global shellenv --init-hook)"
+

@@ -7,15 +7,11 @@ alias l='ls -CF'
 # --- Dev Tools ---
 alias lg='lazygit'
 
-# --- Time Warrior ---
-alias tw=timew
-alias tws='timew summary'
-complete -F _timew tw
-
 # --- Git ---
 alias gs='git status'
 alias gfs='git fetch && git status'
 alias gc='git commit'
+alias gl='git log --oneline --graph --decorate=short'
 
 # --- Functions ---
 dev() {
@@ -29,4 +25,3 @@ isdev() {
     echo "Not Devbox shell👎"
   fi
 }
-
