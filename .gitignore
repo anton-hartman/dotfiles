@@ -1,4 +1,4 @@
-tmux/.config/tmux/plugins/*
+tmux/dot-config/tmux/plugins/*
 .DS_Store
-devbox/.local/share/devbox/global/current
+devbox/dot-local/share/devbox/global/current
 

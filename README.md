@@ -1,6 +1,6 @@
 # Repo to Manage my Dotfiles
 
-My dotfiles are tracked using GNU Stow.
+My dotfiles are tracked using GNU Stow. Use stow with `--dotfiles` flag.
 
 ## To Do
 
@@ -12,14 +12,15 @@ My dotfiles are tracked using GNU Stow.
 
 ## Installation Instructions
 
-1. Install devbox and activate `devbox global`
+1. Install devbox and activate `devbox global`.
 
    ```sh
    curl -fsSL https://get.jetify.com/devbox | bash
    ```
 
-2. Install tmux package manager (TPM)
-3. Install a nerd font
+2. Use stow with `--dotfiles` flag.
+3. Install tmux package manager (TPM).
+4. Install a nerd font.
 
 ## Windows Terminal
 
