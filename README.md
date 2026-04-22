@@ -4,6 +4,7 @@ My dotfiles are tracked using GNU Stow. Use stow with `--dotfiles` flag.
 
 ## To Do
 
+- Change tmux cursor based on normal or insert mode
 - Change Neovim keybindings so that meta key does not clash with Aerospace.
 - Configure Neovim splits, look into plugins like smart splits.
 - Fix zshrc errors.
