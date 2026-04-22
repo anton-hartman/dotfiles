@@ -23,4 +23,5 @@ eval "$(zoxide init --cmd cd zsh)"
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
-
+# EAS Autocomplete
+EAS_AC_ZSH_SETUP_PATH=/Users/anton/Library/Caches/eas-cli/autocomplete/zsh_setup && test -f $EAS_AC_ZSH_SETUP_PATH && source $EAS_AC_ZSH_SETUP_PATH; # eas autocomplete setup

@@ -22,9 +22,6 @@ f="$HOME/.config/sh-common/aliases.sh"
 # In this case we can disable the check since npm's completion script is not our concern.
 # shellcheck disable=SC1090
 source <(npm completion)
-# shellcheck disable=SC1090
-source <(eas autocomplete:script zsh)
 
 # Runs devbox script
 eval "$(devbox global shellenv --init-hook)"
-
