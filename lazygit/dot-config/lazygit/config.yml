@@ -1,0 +1,5 @@
+keybinding:
+  commits:
+    # Remove default Ctrl-j / Ctrl-k bindings by overriding them
+    moveDownCommit: "<c-n>"
+    moveUpCommit: "<c-p>"

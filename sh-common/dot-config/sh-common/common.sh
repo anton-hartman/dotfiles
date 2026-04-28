@@ -1,6 +1,7 @@
 # --- Environment Variables ---
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # --- Cross-Platform Homebrew Logic ---
 if [[ "$OSTYPE" == "darwin"* ]]; then
