@@ -191,7 +191,7 @@ on-mode-changed = []
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     alt-semicolon = 'mode service'
     alt-r = 'mode resize'
-    alt-space = 'mode nvim'
+    alt-space = 'mode noop'
 
 [mode.resize.binding]
     minus = 'resize smart -50'
@@ -201,7 +201,7 @@ on-mode-changed = []
     esc = 'mode main'
 
 # No bindings so that option can be used for meta key bindings in nvim
-[mode.nvim.binding]
+[mode.noop.binding] # noop => no operation
     alt-space = 'mode main'
     alt-semicolon = 'mode service'
 
