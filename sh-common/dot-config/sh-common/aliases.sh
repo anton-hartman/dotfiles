@@ -9,9 +9,12 @@ alias lg='lazygit'
 
 # --- Git ---
 alias gs='git status'
+alias gf='git fetch'
 alias gfs='git fetch && git status'
 alias gc='git commit'
 alias gl='git log --oneline --graph --decorate=short'
+alias gr='git restore .'
+alias ga='git add'
 
 # --- Functions ---
 dev() {
