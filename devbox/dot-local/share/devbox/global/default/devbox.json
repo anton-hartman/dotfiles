@@ -15,7 +15,8 @@
     "zoxide@latest",
     "bat@latest",
     "stow@latest",
-    "starship@latest"
+    "starship@latest",
+    "opencode@latest"
   ],
   "shell": {
     "init_hook": [],
