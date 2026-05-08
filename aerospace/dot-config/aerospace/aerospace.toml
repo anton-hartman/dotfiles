@@ -251,3 +251,12 @@ on-mode-changed = []
     alt-shift-v = 'move-node-to-workspace V'
     alt-shift-w = 'move-node-to-workspace W'
     alt-shift-x = 'move-node-to-workspace X'
+
+[[on-window-detected]]
+    if.app-id = 'com.bitwarden.desktop'
+    run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.finder'
+    run = 'layout floating'
+
