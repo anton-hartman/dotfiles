@@ -16,7 +16,8 @@
     "bat@latest",
     "stow@latest",
     "starship@latest",
-    "opencode@latest"
+    "opencode@latest",
+    "terminal-notifier@latest"
   ],
   "shell": {
     "init_hook": [],
