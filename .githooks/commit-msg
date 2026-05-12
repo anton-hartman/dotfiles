@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+commit_regex='^(feat|fix|docs|style|refactor|perf|test|build|ops|ci|chore|revert)(\(.+\))?!?: .+$'
+merge_regex='^Merge branch'
+revert_regex='^Revert "'
+
+msg=$(cat "$1")
+
+if [[ $msg =~ $merge_regex || $msg =~ $revert_regex ]]; then
+  exit 0
+fi
+
+if [[ ! $msg =~ $commit_regex ]]; then
+  echo "ERROR: commit message must follow Conventional Commits format"
+  echo ""
+  echo "  type(scope): description"
+  echo ""
+  echo "Types: feat, fix, docs, style, refactor, perf, test, build, ops, ci, chore"
+  echo ""
+  echo "Examples:"
+  echo "  feat(tmux): add floax popup keybinding"
+  echo "  fix(nvim): correct colorscheme load order"
+  echo "  chore: update devbox lockfile"
+  exit 1
+fi
