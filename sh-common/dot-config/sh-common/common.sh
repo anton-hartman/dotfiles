@@ -26,3 +26,6 @@ source <(npm completion)
 
 # Runs devbox script
 eval "$(devbox global shellenv --init-hook)"
+
+# shellcheck source=./terminal-notifier.sh
+source "$HOME/.config/sh-common/terminal-notifier.sh"
